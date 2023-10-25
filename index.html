@@ -10,7 +10,24 @@
 </head>
 
 <body>
-    <h1 class="text-5xl">welcome</h1>
+    <section class="container mx-auto">
+        <div class="bg-amber-200 flex justify-center gap-2">
+            <input id="search-field" type="text" placeholder="Search here" class="input px-8 w-1/2 input-bordered " />
+            <button onclick="searchHandler()" class="btn btn-active btn-secondary">Search</button>
+            <button onclick="handleSearch()" class="btn btn-active btn-primary">Search Phone</button>
+            
+        </div>
+    </section>
+    <section>
+        <div id="loading-spinner" class="hidden text-center my-40">
+            <span class="loading loading-spinner text-primary"></span>
+        </div>
+        <div id="phone-container" class="grid gap-2 gap-y-2 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        </div>
+        <div class="hidden" id="show-more-container">
+            <button onclick="handleShowAll()" class="btn btn-outline btn-primary">Show More</button>
+        </div>
+    </section>
     <script src="js/phone.js"></script>
 </body>
 
